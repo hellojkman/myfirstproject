@@ -1,0 +1,85 @@
+
+        .layer {
+            position: absolute;
+            text-align: center;
+            width: 65%;
+            height: 95%;
+            top: 0;
+            left: 0;
+ 
+        }
+        .layer .content {
+            display: inline-block;
+            vertical-align: middle
+        }
+        .layer .blank {
+            display: inline-block;
+            width: 0;
+            height: 100%;
+            vertical-align: middle
+        }
+        .layer1 {
+            position: absolute;
+            width: 97%;
+            height: 10%;
+            top: 0;
+            left: 0;
+ 
+        }
+        .layer1 .content1 {
+            display: inline-block;
+            vertical-align: middle
+        }
+        .layer1 .blank1 {
+            display: inline-block;
+            width: 0;
+            height: 100%;
+            vertical-align: middle
+        }
+        #temp {
+            width:5%;
+            position: absolute;
+            right: 0;
+          }
+
+        body, html { 
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            
+        }
+        .bgimg {
+            border: 0;
+            padding: 0; 
+            background-image: url('../img/a.jpg');
+            min-height: 100%;
+            background-position: center;
+            background-size: cover;
+            
+        }
+
+        .layers {
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            overflow: hidden;
+            z-index: 2000;
+            pointer-events: none;
+        }
+        
+        .layers__item {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            transform: translate3d(0, 101%, 0);
+        }
+        
+        .layers__item-img {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: 50% 50%;
+            transform: translate3d(0, -101%, 0);
+        }

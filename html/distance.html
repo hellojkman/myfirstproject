@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>distance</title>
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+        .mini_main{
+            width: 100%;
+            height: 944px;
+            text-align: center;
+        }
+        .mini_main3{
+            width: 100%;
+            height: 2600px;
+            text-align: center;
+        }
+        .mini_nav{
+            width: 100%;
+        }
+        nav ul {
+            width: 100%;
+            
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline-block;
+        }
+        .home{
+            width: 70px;
+            margin-left: 10px;
+            float: left;
+        }
+        .home a img{
+            width: 50px;
+        }
+        .dropdown:hover .dropdown_content {
+            display: block;
+        }
+        #sub1 {
+            background-image: url("../img/distance/거리백.png");
+            background-size: cover;
+        }
+        #sub2 {
+            border: 1px solid green;
+            width: 100%;
+            height: 100%;
+            background-image: url("../img/distance/거리백12.png");
+            background-size: cover;
+        }
+        #sub3 {
+            border: 1px solid skyblue;
+        }
+        .mini_main .left_icon{
+            float: left;
+            height: 800px;
+            width: 50px;
+            display: flex;
+            margin-top: 3px;
+        }
+        .icon {
+            width: 40px;
+            height: 40px;
+        
+            margin-top: 10px;
+            margin: 4px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .icon_img {
+            max-width: 100%;
+            width:auto !important;
+            height:auto !important;
+        }
+        .icon_list {
+            width: 50px;
+            height: 500px;
+            margin: auto 0;
+        }
+        .icon_line {
+            width: 50px;
+            height: 140px;
+            background-image: url("../img/line.png");
+            background-size: cover;
+
+        }
+        .icon_in {
+            width: 50px;
+            height: 145px;
+            margin-top: 20px;
+            
+        }
+
+        .right {
+            width:100px;
+            height:100px;
+            float: right;
+            position: fixed;
+            top: 50%;
+            right: 0;
+            z-index: 1;
+        }
+        .dot{
+            width: 10px;
+            height: 10px;
+            margin: 10px;
+            
+        }
+        .scroll {
+            float: left;
+            width: 90px;
+            height: 30px;
+            margin-top:50%;
+            margin-left: 320px;
+            text-align: center;
+            animation: up-down 1s infinite ease-in-out alternate;
+            background-image: url("../img/scroll.png");
+            background-size: 100% 100%;
+        }
+        @keyframes up-down{
+            from{
+                transform: translatey(0px);
+            }
+            to{
+                transform: translatey(-20px);
+            }
+        }
+        .distance_main{
+            width:700px;
+            height: 300px;
+            float: left;
+            margin-left: 420px;
+            margin-top: 320px;
+            background-image: url("../img/distance/거리랑-설명.png");
+            background-size: cover;
+
+        }
+        .sub2_main{
+            width:1000px;
+            height: 500px;
+            margin-left: 450px;
+            margin-top: 280px;
+        }
+        .sub2_icon{
+
+            width: 250px;
+            height:200px;
+            background-image: url("../img/distance/자전거픽토그램.png");
+            background-size: cover;
+        }
+        #sub2_icon1{
+            margin-top: 50px;
+            margin-left: 35px;
+            float: left;
+        }
+        #sub2_icon2{
+            margin-top: 50px;
+            margin-left: 75px;
+            float: left;
+        }
+        #sub2_icon3{
+            margin-top: 50px;
+            margin-left: 78px;
+            float: left;
+        }
+        .sub2_text{
+            width:200px;
+            height:50px;
+        }
+        #sub2_text1{
+            float: left;
+            background-image: url("../img/distance/3km.png");
+            background-size: cover;
+            margin-left: 70px;
+            margin-top: 80px;
+        }
+        #sub2_text2{
+            float: left;
+            background-image: url("../img/distance/3~10km.png");
+            background-size: cover;
+            margin-left: 120px;
+            margin-top: 80px;
+        }
+        #sub2_text3{
+            float: left;
+            background-image: url("../img/distance/10km.png");
+            background-size: cover;
+            margin-top: 80px;
+            margin-left: 130px;
+        }
+
+        .sub3_box{
+
+            width: 950px;
+            height: 610px;
+            position:relative;
+            z-index: 1;
+        }
+        #first {
+            float: left;
+            margin-top: 350px;
+            margin-left: 150px;
+        }
+
+        #second {
+            float: right;
+            margin-top: 200px;
+            margin-right: 150px;
+        }
+
+        #third {
+            float: left;
+            margin-top: 200px;
+            margin-left: 180px;
+        }
+        .sub3_box_number{
+            width: 400px;
+            height: 400px;
+            position: absolute;
+        }
+        .sub3_number{
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+        }
+        #first_back{
+            float: left;
+            margin-top: 10px;
+        }
+        #second_back{
+            margin-top: 850px;
+            margin-left: 1480px;
+        }
+        #third_back {
+            float: left;
+            margin-top: 1650px;
+        }
+        .sub3_background{
+            width: 100%;
+            height: 450px;
+            margin-top: 2150px;
+            background-image: url("../img/distance/거리백\(2\).png");
+            background-size: cover;
+            position: absolute;
+        }
+        .sub3_box_img{
+            width: 950px;
+            height: 610px;
+            object-fit: cover;
+        }
+
+    </style>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        jQuery(document).on("ready", function() {
+            jQuery(".mini_main").each(function () {
+                
+                // 개별적으로 Wheel 이벤트 적용
+                jQuery(this).on("mousewheel DOMMouseScroll", function(event) {
+    
+                    var delta = 0;
+                    var moveTop = null;
+                    var boxMax = jQuery(".mini_main").length - 1;
+                    var winEvent = "";
+                       
+                    if(!winEvent) {
+                        winEvent = window.event;
+                    }
+    
+                    if(winEvent.wheelDelta) {
+    
+                        delta = winEvent.wheelDelta / 120;
+                        if(window.opera) {
+                            delta = -delta;
+                        }
+                    }
+    
+                   
+                    else if(winEvent.detail) {
+                        delta = -winEvent.detail / 3;
+                    }
+                    
+                    // 마우스휠을 위에서 아래로 이동
+                    if(delta < 0) {
+    
+                        // 마지막 페이지 보다 순서값이 작은 경우에 실행
+                        if(jQuery(this).index() < boxMax) {
+                            
+                            console.log("▼");
+                            if(jQuery(this).next() != undefined) {
+                                moveTop = jQuery(this).next().offset().top;
+                            }
+                        }
+    
+                        // 마지막 페이지보다 더 아래로 내려가려고 하는경우 알림창 출력
+                        else {
+                            return false;
+                        }
+                    }
+                    else {
+    
+                        // 첫번째 페이지 보다 순서값이 큰 경우에 실행
+                        if(jQuery(this).index() > 0) {
+    
+                            console.log("▲");
+                            if(jQuery(this).prev() != undefined) {
+                                moveTop = jQuery(this).prev().offset().top;
+                            }
+                        }
+    
+                        //첫번째 페이지 보다 위로 갈때 알림                        
+                        else {
+                            alert("첫번째 페이지 입니다.");
+                            return false;
+                        }
+                    }
+    
+                    // 화면 이동 0.8초(800)
+                    jQuery("html,body").stop().animate({
+                        scrollTop : moveTop + "px"
+                    }
+                    , {
+                        duration: 800, complete : function () { }
+                    });
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="mini_main" id="sub1">
+
+        <div class="mini_nav">
+            <nav>
+                <ul>
+                    <li class="home">
+                        <a href="submain.html"><img src="../img/h.png"></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="left_icon">
+            <div class="icon_list">
+                <div class="icon_line"></div>
+                <div class="icon_in">
+                    <div class="icon"><a href="https://www.instagram.com/?hl=ko"><img class="icon_img" src="../img/인스타.png"></a></div>
+                    <div class="icon"><a href="https://twitter.com/?lang=ko"><img class="icon_img" src="../img/트위터.png"></a></div>
+                    <div class="icon"><a href="https://www.youtube.com/"><img class="icon_img" src="../img/유튜브.png"></a></div>
+                </div>
+                <div class="icon_line"></div>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="dot"><a href="#sub1" id="dot1">
+                <img src="../img/small.png" onmouseover="this.src='../img/big.png'" onmouseout="this.src='../img/small.png'">
+            </a></div>
+            <div class="dot"><a href="#sub2" id="dot1">
+                <img src="../img/small.png" onmouseover="this.src='../img/big.png'" onmouseout="this.src='../img/small.png'">
+            </a></div>
+            
+        </div>
+        <div class="distance_main">
+            <a href="#sub2">
+                <div class="scroll">  
+                </div>
+            </a>
+        </div>
+
+    </div>
+
+    <div class="mini_main" id="sub2">
+        <div class="sub2_main">
+            <a id="length1" href="#sub3"><div class="sub2_icon" id="sub2_icon1"></div></a>
+            <a id="length2" href="#sub3"><div class="sub2_icon" id="sub2_icon2"></div></a>
+            <a id="length3" href="#sub3"><div class="sub2_icon" id="sub2_icon3"></div></a>
+
+            <div class="sub2_text" id="sub2_text1"></div>
+            <div class="sub2_text" id="sub2_text2"></div>
+            <div class="sub2_text" id="sub2_text3"></div>
+        </div>
+    </div>
+
+    <div class="mini_main3" id="sub3">
+        <div class="sub3_box_number" id="first_back"><img class="sub3_number" src="../img/distance/01.png"></div>
+        <div class="sub3_box" id="first">
+            <img class="sub3_box_img" id="first1" src="../img/distance/3km-01.png">
+            <img class="sub3_box_img" id="second1" src="../img/distance/3_10km01.png">
+            <img class="sub3_box_img" id="third1" src="../img/distance/10km01.png">
+        </div>
+
+        <div class="sub3_box_number" id="second_back"><img class="sub3_number" src="../img/distance/02.png"></div>
+        <div class="sub3_box" id="second">
+            <img class="sub3_box_img" id="first2" src="../img/distance/3km-02.png">
+            <img class="sub3_box_img" id="second2" src="../img/distance/3_10km02.png">
+            <img class="sub3_box_img" id="third2" src="../img/distance/10km02.png">
+        </div>
+
+        <div class="sub3_box_number" id="third_back"><img class="sub3_number" src="../img/distance/03.png"></div>
+        <div class="sub3_box" id="third">
+            <img class="sub3_box_img" id="first3" src="../img/distance/3km-03.png">
+            <img class="sub3_box_img" id="second3" src="../img/distance/3_10km03.png">
+            <img class="sub3_box_img" id="third3" src="../img/distance/10km03.png">
+        </div>
+        <div class="sub3_background"></div>
+        <script>
+            $(document).ready(function(){
+                    /*웹페이지 열었을 때*/
+                    $("#first1").show();
+                    $("#second1").hide();
+                    $("#third1").hide();
+                    $("#first2").show();
+                    $("#second2").hide();
+                    $("#third2").hide();
+                    $("#first3").show();
+                    $("#second3").hide();
+                    $("#third3").hide();
+                    /*img1을 클릭했을 때 img2를 보여줌*/
+                    $("#length1").click(function(){
+                        $("#first1").show();
+                        $("#second1").hide();
+                        $("#third1").hide();
+                        $("#first2").show();
+                        $("#second2").hide();
+                        $("#third2").hide();
+                        $("#first3").show();
+                        $("#second3").hide();
+                        $("#third3").hide();
+                    });
+                    /*img2를 클릭했을 때 img1을 보여줌*/
+                    $("#length2").click(function(){
+                        $("#first1").hide();
+                        $("#second1").show();
+                        $("#third1").hide();
+                        $("#first2").hide();
+                        $("#second2").show();
+                        $("#third2").hide();
+                        $("#first3").hide();
+                        $("#second3").show();
+                        $("#third3").hide();
+                    });
+                    /*img2를 클릭했을 때 img1을 보여줌*/
+                    $("#length3").click(function(){
+                        $("#first1").hide();
+                        $("#second1").hide();
+                        $("#third1").show();
+                        $("#first2").hide();
+                        $("#second2").hide();
+                        $("#third2").show();
+                        $("#first3").hide();
+                        $("#second3").hide();
+                        $("#third3").show();
+                    });
+                });
+        </script>
+    </div>
+
+</body>
+</html>

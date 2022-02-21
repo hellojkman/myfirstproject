@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bike_category.css">
+    <title>mtv</title>
+    <style>
+        /*첫번째 페이지 배경화면*/
+        #sub1 {
+            background-image: url("../img/mtv/산악자전거백.png");
+            background-size: cover;
+        }
+        /*두번째 페이지 배경화면*/
+        #sub2 {
+            border: 1px solid;
+            background-image: url("../img/장단점백.png");
+            background-size: cover;
+        }
+        /*첫번째 페이지 바이크 이름과 별점*/
+        .main_title {
+            width:530px;
+            height:350px;
+            float: left;
+            margin-top: 170px;
+            margin-left: 180px;
+            background-image: url("../img/mtv/산악자전거-설명이랑-별점.png");
+            background-size: 100% 100%;
+        }
+    </style>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../js/bike_category.js"></script>
+</head>
+<body>
+    <!--1페이지-->
+    <div class="mini_main" id="sub1">
+        <div class="mini_nav">
+            <nav>
+                <ul>
+                    <!--상단 로고+드롭다운메뉴 각각 다른 카테고리와 연결-->
+                    <li class="home">
+                        <a href="bike.html"><img src="../img/h.png"></a>
+                    </li>
+                    <li class="dropdown">
+                        <div class="dropdown_menu">미니벨로</div>
+                        <div class="dropdown_content">
+                            <a href="mini.html #sub1">자전거소개</a>
+                            <a href="mini.html #sub2">장단점</a>
+                            <a href="mini.html #sub3">브랜드소개</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <div class="dropdown_menu">산악자전거</div>
+                        <div class="dropdown_content">
+                            <a href="#sub1">자전거소개</a>
+                            <a href="#sub2">장단점</a>
+                            <a href="#sub3">브랜드소개</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <div class="dropdown_menu">로드자전거</div>
+                        <div class="dropdown_content">
+                            <a href="road.html #sub1">자전거소개</a>
+                            <a href="road.html #sub2">장단점</a>
+                            <a href="road.html #sub3">브랜드소개</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <div class="dropdown_menu">하이브리드</div>
+                        <div class="dropdown_content">
+                            <a href="hybrid.html #sub1">자전거소개</a>
+                            <a href="hybrid.html #sub2">장단점</a>
+                            <a href="hybrid.html #sub3">브랜드소개</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <div class="dropdown_menu">픽시자전거</div>
+                        <div class="dropdown_content">
+                            <a href="fixed.html #sub1">자전거소개</a>
+                            <a href="fixed.html #sub2">장단점</a>
+                            <a href="fixed.html #sub3">브랜드소개</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <div class="dropdown_menu">리컴번트</div>
+                        <div class="dropdown_content">
+                            <a href="recombent.html #sub1">자전거소개</a>
+                            <a href="recombent.html #sub2">장단점</a>
+                            <a href="recombent.html #sub3">브랜드소개</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!--왼쪽 인스타,트위터,유튜브아이콘(수정금지)-->
+        <div class="left_icon">
+            <div class="icon_list">
+                <div class="icon_line"></div>
+                <div class="icon_in">
+                    <div class="icon"><a href="https://www.instagram.com/?hl=ko"><img class="icon_img" src="../img/인스타.png"></a></div>
+                    <div class="icon"><a href="https://twitter.com/?lang=ko"><img class="icon_img" src="../img/트위터.png"></a></div>
+                    <div class="icon"><a href="https://www.youtube.com/"><img class="icon_img" src="../img/유튜브.png"></a></div>
+                </div>
+                <div class="icon_line"></div>
+            </div>
+        </div>
+        <!--중앙 자전거종류와 별점+스크롤 화살표-->
+        <div class="main">
+            <div class="main_title">
+                <a href="#sub2">
+                <div class="scroll">  
+                </div>
+            </a>
+            </div>
+            <!--오른쪽 자전거 분할 사진 3개-->
+            <div class="subamin_box">
+                <div class="box"><img class="box_img" src="../img/mtv/산악01.png"></div>
+                <div class="box"><img class="box_img" src="../img/mtv/산악02.png"></div>
+                <div class="box"><img class="box_img" src="../img/mtv/산악03.png"></div>
+            </div>
+        </div>
+        <!--오른쪽 도트3개(수정금지)-->
+        <div class="right">
+            <div class="dot"><a href="#sub1" id="dot1">
+                <img src="../img/small.png" onmouseover="this.src='../img/big.png'" onmouseout="this.src='../img/small.png'">
+            </a></div>
+            <div class="dot"><a href="#sub2" id="dot1">
+                <img src="../img/small.png" onmouseover="this.src='../img/big.png'" onmouseout="this.src='../img/small.png'">
+            </a></div>
+            <div class="dot"><a href="#sub3" id="dot1">
+                <img src="../img/small.png" onmouseover="this.src='../img/big.png'" onmouseout="this.src='../img/small.png'">
+            </a></div>
+        </div>
+    </div>
+
+    <!--2페이지-->
+    <div class="mini_main" id="sub2">
+        <div class="sub2_box">
+            <div class="sub2_eva">
+                <div id="pin"></div>
+                <div class="sub2_strength" id="strength"></div>
+                <div class="sub2_eva_text">
+                    <!--2페이지 장점사진, 장점글-->
+                    <img class="sub2_eva_img" id="strength_img1" src="../img/mtv/산악자전거장점사진.png">
+                    <img class="sub2_eva_img" id="strength_img2" src="../img/mtv/산악자전거장점글.png">
+                </div>
+                    <!--열기,닫기버튼(수정금지)-->
+                <div class="sub2_button">
+                    <img class="button" id="button1" src="../img/open.png">
+                    <img class="button" id="button2" src="../img/close.png">
+                </div>
+            </div>
+            <div class="sub2_eva">
+                <div id="pin"></div>
+                <!--2페이지 단점사진, 단점글-->
+                <div class="sub2_weakness" id="weakness"></div>
+                <div class="sub2_eva_text">
+                    <img class="sub2_eva_img" id="weakness_img1" src="../img/mtv/산악자전거단점사진.png">
+                    <img class="sub2_eva_img" id="weakness_img2" src="../img/mtv/산악자전거단점글.png">
+                </div>
+                <!--열기,닫기버튼(수정금지)-->
+                <div class="sub2_button">
+                    <img class="button" id="button3" src="../img/open.png">
+                    <img class="button" id="button4" src="../img/close.png">
+                </div>
+            </div>
+            <script type="text/javascript" src="../js/strength.js"></script>
+        </div>
+    </div>
+    
+    <!--3페이지-->
+    <div class="mini_main" id="sub3">
+        <div class="brand_title"></div>
+        <!--Brand3곳 사진-->
+        <div class="sub3_main">
+            <div class="sub3_main_box"><a id="img1"><img class="sub3_main_img" src="../img/mtv/cello사진.png"></a></div>
+            <div class="sub3_main_box"><a id="img2"><img class="sub3_main_img" src="../img/mtv/scott사진.png"></a></div>
+            <div class="sub3_main_box"><a id="img3"><img class="sub3_main_img" src="../img/mtv/자이언트사진.png"></a></div>
+        </div>
+        
+        <div class="sub3_right" id="detail1">
+            <!--첫번째 브랜드 이미지+텍스트+링크-->
+            <div class="sub3_title"><img class="sub3_title_img" src="../img/mtv/cello.png"></div>
+            <div class="sub3_text">
+                삼천리 자전거의 자회사에서 만든 고급브랜드이다. <br>
+                입문용부터 카본이나 티타늄프레임의 고급제품까지<br>
+                있으며, 판매망과 A/S는 기존 삼천리 자전거와<br>
+                공유하여 국내에서 유지보수에 이점이 있다. <br>
+                가격대는 40만원대부터 500만원까지<br>
+                다양한 모델이 있다.<br>
+            </div>
+            <div class="sub3_link"><a href="https://www.cellobike.co.kr/main/main.html"><img class="sub3_title_img" src="../img/mtv/cello링크.png"></a></div>
+        </div>
+        <div class="sub3_right" id="detail2">
+            <!--두번째 브랜드 이미지+텍스트+링크-->
+            <div class="sub3_title"><img class="sub3_title_img" src="../img/mtv/scott.png"></div>
+            <div class="sub3_text">
+                스위스에서 시작하여 국내 무역회사가 인수한 <br>
+                한국의 자전거 브랜드로 1995년 세계최초로 <br>
+                풀카본 자전거를 발표하였으며 2000년엔 최초로 <br>
+                풀샥 카본자전거와 800 그람대의 CR1카본프레임 <br>
+                자전거롤 내놓은 회사이다. 가격대는40만원대부터 <br>
+                800만원대 까지 다양한 모델이 있다.<br>
+            </div>
+            <div class="sub3_link"><a href="https://www.scott-sports.com/kr/ko/"><img class="sub3_title_img" src="../img/mtv/scott링크.png"></a></div>
+        </div>
+        <div class="sub3_right" id="detail3">
+            <!--세번째 브랜드 이미지+텍스트+링크-->
+            <div class="sub3_title"><img class="sub3_title_img" src="../img/mtv/자이언트.png"></div>
+            <div class="sub3_text">
+                대만의 자전거 메이커로 자전거시장점유율, 매출, <br>
+                생산대수 모두 세계 순위권인 자전거 업계의 거인이다. <br>
+                한국에는 자이언트 코리아로 직접 운영하고 있으며 <br>
+                뛰어난 가성비와 괜찮은 디자인으로 MTB 시장을 <br>
+                주름잡고 있다. 가격대는 40만원대부터 500만원까지 <br>
+                다양한 모델이 있다.<br>
+            </div>
+            <div class="sub3_link"><a href="https://www.giant-bicycles.com/kr"><img class="sub3_title_img" src="../img/mtv/자이언트링크.png"></a></div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="../js/brand.js"></script>
+    </div>
+</body>
+</html>

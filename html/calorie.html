@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calorie</title>
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+        .mini_main{
+            width: 100%;
+            height: 944px;
+            text-align: center;
+        }
+        .mini_nav{
+            width: 100%;
+        }
+        nav ul {
+            width: 100%;
+            
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline-block;
+        }
+        .home{
+            width: 70px;
+            margin-left: 10px;
+            float: left;
+        }
+        .home a img{
+            width: 50px;
+        }
+        #sub1 {
+            background-image: url("../img/calorie/칼로리백1.png");
+            background-size: cover;
+        }
+        #sub2 {
+            background-image: url("../img/calorie/칼로리백2.png");
+            background-size: cover;
+        }
+        .mini_main .left_icon{
+
+            float: left;
+            height: 800px;
+            width: 50px;
+            display: flex;
+            margin-top: 3px;
+        }
+        .icon {
+            width: 40px;
+            height: 40px;
+        
+            margin-top: 10px;
+            margin: 4px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .icon_img {
+            max-width: 100%;
+            width:auto !important;
+            height:auto !important;
+        }
+        .icon_list {
+            width: 50px;
+            height: 500px;
+            margin: auto 0;
+        }
+        .icon_line {
+            width: 50px;
+            height: 140px;
+            background-image: url("../img/line.png");
+            background-size: cover;
+
+        }
+        .icon_in {
+            width: 50px;
+            height: 145px;
+            margin-top: 20px;
+        }
+
+        .main {
+            width:1700px;
+            height:800px;
+            float: left;
+        }    
+        .main_title {
+            width:700px;
+            height:300px;
+            float: left;
+            margin-top: 350px;
+            margin-left: 450px;
+            background-image: url("../img/calorie/칼로리랑-설명.png");
+            background-size: 100% 100%;
+        }
+        .right {
+            width:100px;
+            height:100px;
+            float: right;
+            position: fixed;
+            top: 50%;
+            right: 0;
+        }
+        .dot{
+            width: 10px;
+            height: 10px;
+            margin: 10px;
+        }
+        .scroll {
+            float: left;
+            width: 90px;
+            height: 30px;
+            margin-top:50%;
+            margin-left: 310px;
+            text-align: center;
+            animation: up-down 1s infinite ease-in-out alternate;
+            background-image: url("../img/scroll.png");
+            background-size: 100% 100%;
+        }
+        @keyframes up-down{
+            from{
+                transform: translatey(0px);
+            }
+            to{
+                transform: translatey(-20px);
+            }
+        }
+        .calories {
+            position: absolute;
+            display: inline-block;
+            width: 70%;
+            /* border: 1px solid rgb(93, 0, 255); */
+            height: 500px;
+            margin-top:200px;
+            text-align: center;
+            margin-left: 15% ;
+        }
+
+        .first {
+            position: absolute;
+            display: inline-block;
+            width: 30%;
+            height: 480px;
+            margin-top:200px;
+            margin-left: -48% ;
+            margin-right: 10%;
+            animation: up-down 1s infinite ease-in-out alternate;
+            }
+        @keyframes up-down{
+        from{
+            transform: translatey(0px);
+        }
+        to{
+            transform: translatey(-30px);
+        }
+        }
+        .second {
+            position: absolute;
+            display: inline-block;
+            width: 30%;
+            height: 480px;
+            margin-top:200px;
+            margin-left: -15.4% ;
+            animation: up-down 1s infinite ease-in-out alternate;
+            }
+        @keyframes up-down{
+        from{
+            transform: translatey(0px);
+        }
+        to{
+            transform: translatey(-30px);
+        }
+        }
+        .third {
+            position: absolute;
+            display: inline-block;
+            width: 30%;
+            height: 480px;
+            margin-top:200px;
+            margin-left: 17.5% ;
+            animation: up-down 1s infinite ease-in-out alternate;
+            }
+        @keyframes up-down{
+        from{
+            transform: translatey(0px);
+        }
+        to{
+            transform: translatey(-30px);
+        }
+        }
+    </style>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        jQuery(document).on("ready", function() {
+            jQuery(".mini_main").each(function () {
+                
+                // 개별적으로 Wheel 이벤트 적용
+                jQuery(this).on("mousewheel DOMMouseScroll", function(event) {
+    
+                    var delta = 0;
+                    var moveTop = null;
+                    var boxMax = jQuery(".mini_main").length - 1;
+                    var winEvent = "";
+                       
+                    if(!winEvent) {
+                        winEvent = window.event;
+                    }
+    
+                    if(winEvent.wheelDelta) {
+    
+                        delta = winEvent.wheelDelta / 120;
+                        if(window.opera) {
+                            delta = -delta;
+                        }
+                    }
+    
+                   
+                    else if(winEvent.detail) {
+                        delta = -winEvent.detail / 3;
+                    }
+                    
+                    // 마우스휠을 위에서 아래로 이동
+                    if(delta < 0) {
+    
+                        // 마지막 페이지 보다 순서값이 작은 경우에 실행
+                        if(jQuery(this).index() < boxMax) {
+                            
+                            console.log("▼");
+                            if(jQuery(this).next() != undefined) {
+                                moveTop = jQuery(this).next().offset().top;
+                            }
+                        }
+    
+                        // 마지막 페이지보다 더 아래로 내려가려고 하는경우 알림창 출력
+                        else {
+                            alert("마지막 페이지 입니다.");
+                            return false;
+                        }
+                    }
+                    else {
+    
+                        // 첫번째 페이지 보다 순서값이 큰 경우에 실행
+                        if(jQuery(this).index() > 0) {
+    
+                            console.log("▲");
+                            if(jQuery(this).prev() != undefined) {
+                                moveTop = jQuery(this).prev().offset().top;
+                            }
+                        }
+    
+                        //첫번째 페이지 보다 위로 갈때 알림                        
+                        else {
+                            alert("첫번째 페이지 입니다.");
+                            return false;
+                        }
+                    }
+    
+                    // 화면 이동 0.8초(800)
+                    jQuery("html,body").stop().animate({
+                        scrollTop : moveTop + "px"
+                    }
+                    , {
+                        duration: 800, complete : function () { }
+                    });
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- sub1 page start -->
+
+    <div class="mini_main" id="sub1">
+        <div class="mini_nav">
+            <nav>
+                <ul>
+                    <li class="home">
+                        <a href="submain.html"><img src="../img/h.png"></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="left_icon">
+            <div class="icon_list">
+                <div class="icon_line"></div>
+                <div class="icon_in">
+                    <div class="icon"><a href="https://www.instagram.com/?hl=ko"><img class="icon_img" src="../img/인스타.png"></a></div>
+                    <div class="icon"><a href="https://twitter.com/?lang=ko"><img class="icon_img" src="../img/트위터.png"></a></div>
+                    <div class="icon"><a href="https://www.youtube.com/"><img class="icon_img" src="../img/유튜브.png"></a></div>
+                </div>
+                <div class="icon_line"></div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="main_title">
+                <a href="#sub2">
+                <div class="scroll">
+                </div>
+            </a>
+            </div>
+        </div>
+        <div class="right">
+            <div class="dot"><a href="#sub1" id="dot1">
+                <img src="../img/small.png" onmouseover="this.src='../img/big.png'" onmouseout="this.src='../img/small.png'">
+            </a></div>
+            <div class="dot"><a href="#sub2" id="dot1">
+                <img src="../img/small.png" onmouseover="this.src='../img/big.png'" onmouseout="this.src='../img/small.png'">
+            </a></div>
+        </div>
+    </div>
+
+    <!--sub 1 page end -->
+    <div class="mini_main" id="sub2">
+        <div class="calories" style="left:0px">
+            <div id="first" class="first">
+                <img id='min' src="../img/calorie/30분.png" style="height: 55%; width: 60%;">
+            </div>
+            <div id="second" class="second">
+                <img id='hour' src="../img/calorie/1시간.png" style="height: 55%; width:60%;">
+            </div>
+            <div id="third" class="third">
+                <img id='hour2' src="../img/calorie/2시간.png" style="height: 55%; width: 60%;">
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <!-- 각 메뉴들 움직이는 쿼리 -->
+    <script>
+        $(function(){
+            $('.first img').click(function(){
+                if  ($('.first img').attr('src') == "../img/calorie/30분.png"){
+                    $('.first img').attr('src','../img/calorie/30분-칼로리.png').css("height","90%").css("width","100%")
+                    $('.first').css('animation-play-state','paused');
+                }
+                else{
+                    $('.first img').attr('src','../img/calorie/30분.png').css("height","55%").css("width","60%").css('animation-play-state','running');
+                    $('.first').css('animation-play-state','running');
+                }
+            })
+        }); 
+        $(function(){
+            $('.second img').click(function(){
+                if  ($('.second img').attr('src') == "../img/calorie/1시간.png"){
+                    $('.second img').attr('src','../img/calorie/1시간-칼로리.png').css("height","90%").css("width","100%")
+                    $('.second').css('animation-play-state','paused');
+                }
+                else{
+                    $('.second img').attr('src','../img/calorie/1시간.png').css("height","55%").css("width","60%");
+                    $('.second').css('animation-play-state','running');
+                }
+            })
+        }); 
+
+        $(function(){
+            $('.third img').click(function(){
+                if  ($('.third img').attr('src') == "../img/calorie/2시간.png"){
+                    $('.third img').attr('src','../img/calorie/2시간-칼로리.png').css("height","90%").css("width","100%");
+                    $('.third').css('animation-play-state','paused');
+                }
+                else{
+                    $('.third img').attr('src','../img/calorie/2시간.png').css("height","55%").css("width","60%");
+                    $('.third').css('animation-play-state','running');
+                }
+            })
+        }); 
+    </script>
+</body>
+</html>

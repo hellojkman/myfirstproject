@@ -1,0 +1,24 @@
+    .wrapper {
+        display:flex;
+        justify-content : center;
+        align-items: center;
+        min-height: 100vh;
+    }
+    .content {
+        font-family: system-ui, serif;
+        font-size: 2rem;
+        padding: 4rem;
+        border-radius: 1rem;
+        margin-top: 20%;
+    }
+    body { 
+        background-image: url('../img/back.png');
+        background-repeat : no-repeat;
+        background-size : cover;
+        background-position: center;
+        margin: 0;
+        padding: 0;
+        height: 100vh;     /*퍼센트개념보다 더 확실하게 잡아주는것*/
+         width: 100vw;
+    }
+ 

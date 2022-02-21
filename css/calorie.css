@@ -1,0 +1,167 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+.mini_main{
+    width: 100%;
+    height: 944px;
+    text-align: center;
+}
+.mini_nav{
+    width: 100%;
+}
+nav ul {
+    width: 100%;
+    
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    display: inline-block;
+}
+.home{
+    width: 70px;
+    margin-left: 10px;
+    float: left;
+}
+.home a img{
+    width: 50px;
+}
+#sub1 {
+    background-image: url("../img/칼로리백1.png");
+    background-size: cover;
+}
+#sub2 {
+    background-image: url("../img/칼로리백2.png");
+    background-size: cover;
+}
+.mini_main .left_icon{
+
+    float: left;
+    height: 800px;
+    width: 50px;
+    display: flex;
+    margin-top: 3px;
+}
+.icon {
+    width: 40px;
+    height: 40px;
+
+    margin-top: 10px;
+    margin: 4px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon_img {
+    max-width: 100%;
+    width:auto !important;
+    height:auto !important;
+}
+.icon_list {
+    width: 50px;
+    height: 500px;
+    margin: auto 0;
+}
+.icon_line {
+    width: 50px;
+    height: 140px;
+    background-image: url("../img/선.png");
+    background-size: cover;
+
+}
+.icon_in {
+    width: 50px;
+    height: 145px;
+    margin-top: 20px;
+}
+
+.main {
+    width:1700px;
+    height:800px;
+    float: left;
+}    
+.main_title {
+    width:700px;
+    height:300px;
+    float: left;
+    margin-top: 350px;
+    margin-left: 450px;
+    background-image: url("../img/칼로리설명.png");
+    background-size: 100% 100%;
+}
+.right {
+    width:100px;
+    height:100px;
+    float: right;
+    position: fixed;
+    top: 50%;
+    right: 0;
+}
+.dot{
+    width: 10px;
+    height: 10px;
+    margin: 10px;
+}
+.scroll {
+    float: left;
+    width: 90px;
+    height: 30px;
+    margin-top:50%;
+    margin-left: 310px;
+    text-align: center;
+    animation: up-down 1s infinite ease-in-out alternate;
+    background-image: url("../img/scroll.png");
+    background-size: 100% 100%;
+}
+
+.calories {
+    position: absolute;
+    display: inline-block;
+    width: 70%;
+    /* border: 1px solid rgb(93, 0, 255); */
+    height: 500px;
+    margin-top:200px;
+    text-align: center;
+    margin-left: 15% ;
+}
+
+.first {
+    position: absolute;
+    display: inline-block;
+    width: 30%;
+    height: 480px;
+    margin-top:200px;
+    margin-left: -48% ;
+    margin-right: 10%;
+    animation: up-down 1s infinite ease-in-out alternate;
+    }
+
+.second {
+    position: absolute;
+    display: inline-block;
+    width: 30%;
+    height: 480px;
+    margin-top:200px;
+    margin-left: -15.4% ;
+    animation: up-down 1s infinite ease-in-out alternate;
+    }
+.third {
+    position: absolute;
+    display: inline-block;
+    width: 30%;
+    height: 480px;
+    margin-top:200px;
+    margin-left: 17.5% ;
+    animation: up-down 1s infinite ease-in-out alternate;
+    }
+@keyframes up-down{
+from{
+    transform: translatey(0px);
+}
+to{
+    transform: translatey(-30px);
+}
+}
